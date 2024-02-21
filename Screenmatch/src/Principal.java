@@ -1,17 +1,16 @@
 import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme("O poderoso chefão", 1970, 180);
+        Serie newSerie = new Serie();
 
-        meuFilme.avalia(8);
-        meuFilme.avalia(7.5);
-        meuFilme.avalia(10);
-        meuFilme.exibeFichaTecnica();
+        newSerie.setNome("Broklyn 99");
+        newSerie.setTemporadas(9);
+        newSerie.setEpisodiosPorTemporada(20);
+        newSerie.setMinutosPorEpisodio(25);
 
-        System.out.println(meuFilme.pegaMedia());
-        System.out.println("Total de avaliações: "+meuFilme.getTotalAvaliacoes());
-
+        System.out.println(newSerie.getDuracaoEmMinutos());
     }
 }
